@@ -335,7 +335,7 @@ impl Log for StdErrLog {
             Timestamp::Off => {}
         }
         if self.show_level {
-            let _ = write!(writer, "{} - ", record.level());
+            let _ = write!(writer, "[{}] - ", record.level());
         }
         let _ = writeln!(writer, "{}", record.args());
         {
